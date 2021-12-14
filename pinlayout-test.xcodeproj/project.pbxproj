@@ -15,6 +15,8 @@
 		624D11A62756478400E818A4 /* pinlayout_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624D11A52756478400E818A4 /* pinlayout_testTests.swift */; };
 		624D11B02756478400E818A4 /* pinlayout_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624D11AF2756478400E818A4 /* pinlayout_testUITests.swift */; };
 		624D11B22756478400E818A4 /* pinlayout_testUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624D11B12756478400E818A4 /* pinlayout_testUITestsLaunchTests.swift */; };
+		62FFE5DF27688931000C1DB9 /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 62FFE5DE27688931000C1DB9 /* PinLayout */; };
+		62FFE5E227688979000C1DB9 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 62FFE5E127688979000C1DB9 /* Then */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62FFE5DF27688931000C1DB9 /* PinLayout in Frameworks */,
+				62FFE5E227688979000C1DB9 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +144,10 @@
 			dependencies = (
 			);
 			name = "pinlayout-test";
+			packageProductDependencies = (
+				62FFE5DE27688931000C1DB9 /* PinLayout */,
+				62FFE5E127688979000C1DB9 /* Then */,
+			);
 			productName = "pinlayout-test";
 			productReference = 624D118B2756478200E818A4 /* pinlayout-test.app */;
 			productType = "com.apple.product-type.application";
@@ -212,6 +220,10 @@
 				Base,
 			);
 			mainGroup = 624D11822756478200E818A4;
+			packageReferences = (
+				62FFE5DD27688931000C1DB9 /* XCRemoteSwiftPackageReference "PinLayout" */,
+				62FFE5E027688979000C1DB9 /* XCRemoteSwiftPackageReference "Then" */,
+			);
 			productRefGroup = 624D118C2756478200E818A4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -610,6 +622,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		62FFE5DD27688931000C1DB9 /* XCRemoteSwiftPackageReference "PinLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/layoutBox/PinLayout";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		62FFE5E027688979000C1DB9 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		62FFE5DE27688931000C1DB9 /* PinLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62FFE5DD27688931000C1DB9 /* XCRemoteSwiftPackageReference "PinLayout" */;
+			productName = PinLayout;
+		};
+		62FFE5E127688979000C1DB9 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62FFE5E027688979000C1DB9 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 624D11832756478200E818A4 /* Project object */;
 }
