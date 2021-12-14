@@ -6,14 +6,23 @@
 //
 
 import UIKit
+import Then
+import PinLayout
 
 class ViewController: UIViewController {
 
+    private let view1: UIView = UIView().then {
+        $0.backgroundColor = .systemBlue
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        self.view.addSubview(self.view1)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        view1.pin.all(self.view.pin.safeArea)
     }
 
-
 }
-
