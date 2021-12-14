@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         self.view.addSubview(self.view1)
     }
     
+    // SafeArea, Rotate Code need to be written here
     override func viewDidLayoutSubviews() {
         view1.pin.all(self.view.pin.safeArea)
     }
